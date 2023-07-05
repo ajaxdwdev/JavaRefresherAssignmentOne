@@ -15,7 +15,7 @@ public class Student {
     }
 
     public int calculateTotalMarks() {
-        return marksInEnglish + marksInMath + marksInScience;
+        return (marksInEnglish + marksInMath + marksInScience)/3;
     }
 
     public String calculateGrade() {

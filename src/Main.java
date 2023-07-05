@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -16,20 +17,28 @@ public class Main {
             System.out.println("3. Exit");
             System.out.println("Enter your choice number:");
 
-            menuOption = scanner.nextInt();
+            try {
 
-            switch (menuOption) {
-                case 1:
-                    studentMngmntSys.addStudent();
-                    break;
-                case 2:
-                    studentMngmntSys.displayStudentInfo();
-                    break;
-                case 3:
-                    System.out.println("Exiting the program.");
-                    break;
-                default:
-                    System.out.println("Invalid option. Please try again.");
+                menuOption = scanner.nextInt();
+                scanner.nextLine();
+
+                switch (menuOption) {
+                    case 1:
+                        studentMngmntSys.addStudent();
+                        break;
+                    case 2:
+                        studentMngmntSys.displayStudentInfo();
+                        break;
+                    case 3:
+                        System.out.println("Exiting the program.");
+                        break;
+                    default:
+                        System.out.println("Invalid option. Please try again.");
+                }
+            }catch(InputMismatchException e){
+                System.out.println("Please enter a valid number (1-3).");
+                scanner.nextLine();
+                menuOption = 0;
             }
         } while (menuOption != 3);
 
