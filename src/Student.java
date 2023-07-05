@@ -19,7 +19,9 @@ public class Student {
     }
 
     public String calculateGrade() {
+
         int totalMarks = calculateTotalMarks();
+
         if (totalMarks >= 90) {
             return "A";
         } else if (totalMarks >= 80) {
@@ -31,6 +33,7 @@ public class Student {
         } else {
             return "F";
         }
+
     }
 
     public String getName() {

@@ -50,6 +50,7 @@ public class StudentManagementSystem {
         }
 
         System.out.println("Student Information:");
+
         for (int i = 0; i < studentCount; i++) {
             Student student = students[i];
             System.out.println("Name: " + student.getName());
