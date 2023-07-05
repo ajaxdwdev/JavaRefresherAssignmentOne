@@ -7,12 +7,16 @@ public class StudentManagementSystem {
     private int studentCount;
 
     public StudentManagementSystem() {
+
         students = new Student[100];
         studentCount = 0;
+
     }
 
     public void addStudent(){
+
         Scanner scanner = new Scanner(System.in);
+
         try {
             System.out.println("Enter student name:");
             String name = scanner.nextLine();
@@ -36,6 +40,7 @@ public class StudentManagementSystem {
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter again.");
         }
+
     }
 
     public void displayStudentInfo() {
@@ -51,7 +56,7 @@ public class StudentManagementSystem {
             System.out.println("Roll Number: " + student.getRollNumber());
             System.out.println("Total Marks: " + student.calculateTotalMarks());
             System.out.println("Grade: " + student.calculateGrade());
-            System.out.println("--------------------");
+            System.out.println("------------------------");
         }
     }
 

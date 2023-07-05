@@ -7,17 +7,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StudentManagementSystem studentMngmntSys = new StudentManagementSystem();
 
-        int choice;
+        int menuOption;
+
         do {
             System.out.println("Menu:");
             System.out.println("1. Add Student");
             System.out.println("2. Display Student Information");
             System.out.println("3. Exit");
-            System.out.println("Enter your choice:");
+            System.out.println("Enter your choice number:");
 
-            choice = scanner.nextInt();
+            menuOption = scanner.nextInt();
 
-            switch (choice) {
+            switch (menuOption) {
                 case 1:
                     studentMngmntSys.addStudent();
                     break;
@@ -25,12 +26,12 @@ public class Main {
                     studentMngmntSys.displayStudentInfo();
                     break;
                 case 3:
-                    System.out.println("Exiting the program...");
+                    System.out.println("Exiting the program.");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid option. Please try again.");
             }
-        } while (choice != 3);
+        } while (menuOption != 3);
 
     }
 
